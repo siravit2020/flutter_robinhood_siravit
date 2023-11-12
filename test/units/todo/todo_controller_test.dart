@@ -41,6 +41,7 @@ void main() {
       expect(todoController.sortType.value, TodoSortType.asc);
       expect(todoController.status, TodoStatus.todo);
       expect(todoController.scrollController.offset, 0.0);
+      expect(todoController.limit, 10);
     });
 
     test('Change Tab updates status and refreshes paging controller', () {

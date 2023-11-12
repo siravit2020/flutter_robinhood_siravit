@@ -20,6 +20,7 @@ class TodoController extends GetxController {
   final PagingController<int, MapEntry<DateTime, List<Task>>> pagingController;
   final ScrollController scrollController;
   final Rx<TodoSortType> sortType = TodoSortType.asc.obs;
+  final int limit = 10;
   TodoStatus status = TodoStatus.todo;
 
   @override
@@ -46,7 +47,7 @@ class TodoController extends GetxController {
     try {
       final TodoResponse response = await todoRepository.getTodoList(
         offset: pageKey,
-        limit: 10,
+        limit: limit,
         status: status.name.toUpperCase(),
         isAsc: sortType.value == TodoSortType.asc,
       );
