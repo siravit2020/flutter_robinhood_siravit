@@ -23,7 +23,6 @@ dependencies:
   logger: ^2.0.2+1
   lottie: ^2.7.0
   mockito: ^5.4.2
-  path_provider: ^2.1.1
   restart_app: ^1.2.1
   retrofit: ^4.0.3
 
